@@ -9,10 +9,11 @@
 /* Begin PBXBuildFile section */
 		CB01F1A67BEB381B80CA3285 /* Pods_ChatExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A65BF354CBA4687D88341AC6 /* Pods_ChatExample.framework */; };
 		DCE125BB1DE6EDF0003EFC56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE125BA1DE6EDF0003EFC56 /* AppDelegate.swift */; };
-		DCE125BD1DE6EDF0003EFC56 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE125BC1DE6EDF0003EFC56 /* ViewController.swift */; };
+		DCE125BD1DE6EDF0003EFC56 /* ConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE125BC1DE6EDF0003EFC56 /* ConversationViewController.swift */; };
 		DCE125C01DE6EDF0003EFC56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCE125BE1DE6EDF0003EFC56 /* Main.storyboard */; };
 		DCE125C21DE6EDF0003EFC56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCE125C11DE6EDF0003EFC56 /* Assets.xcassets */; };
 		DCE125C51DE6EDF0003EFC56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCE125C31DE6EDF0003EFC56 /* LaunchScreen.storyboard */; };
+		DCE125D01DE70F3E003EFC56 /* SocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE125CF1DE70F3E003EFC56 /* SocketManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,11 +22,13 @@
 		A9508C93FE599B6AA90E9677 /* Pods-ChatExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChatExample/Pods-ChatExample.release.xcconfig"; sourceTree = "<group>"; };
 		DCE125B71DE6EDF0003EFC56 /* ChatExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCE125BA1DE6EDF0003EFC56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DCE125BC1DE6EDF0003EFC56 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DCE125BC1DE6EDF0003EFC56 /* ConversationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationViewController.swift; sourceTree = "<group>"; };
 		DCE125BF1DE6EDF0003EFC56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DCE125C11DE6EDF0003EFC56 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DCE125C41DE6EDF0003EFC56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DCE125C61DE6EDF0003EFC56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCE125CD1DE6F3C3003EFC56 /* BridgeHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgeHeader.h; sourceTree = "<group>"; };
+		DCE125CF1DE70F3E003EFC56 /* SocketManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,14 +64,32 @@
 		DCE125B91DE6EDF0003EFC56 /* ChatExample */ = {
 			isa = PBXGroup;
 			children = (
-				DCE125BA1DE6EDF0003EFC56 /* AppDelegate.swift */,
-				DCE125BC1DE6EDF0003EFC56 /* ViewController.swift */,
-				DCE125BE1DE6EDF0003EFC56 /* Main.storyboard */,
 				DCE125C11DE6EDF0003EFC56 /* Assets.xcassets */,
+				DCE125BA1DE6EDF0003EFC56 /* AppDelegate.swift */,
+				DCE125BC1DE6EDF0003EFC56 /* ConversationViewController.swift */,
 				DCE125C31DE6EDF0003EFC56 /* LaunchScreen.storyboard */,
-				DCE125C61DE6EDF0003EFC56 /* Info.plist */,
+				DCE125BE1DE6EDF0003EFC56 /* Main.storyboard */,
+				DCE125CE1DE70EFC003EFC56 /* Servises */,
+				DCE125CC1DE6F3AA003EFC56 /* SupportingFiles */,
 			);
 			path = ChatExample;
+			sourceTree = "<group>";
+		};
+		DCE125CC1DE6F3AA003EFC56 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				DCE125C61DE6EDF0003EFC56 /* Info.plist */,
+				DCE125CD1DE6F3C3003EFC56 /* BridgeHeader.h */,
+			);
+			name = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		DCE125CE1DE70EFC003EFC56 /* Servises */ = {
+			isa = PBXGroup;
+			children = (
+				DCE125CF1DE70F3E003EFC56 /* SocketManager.swift */,
+			);
+			name = Servises;
 			sourceTree = "<group>";
 		};
 		DE494C4E2A935BF1BDD3C1B0 /* Pods */ = {
@@ -212,7 +233,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DCE125BD1DE6EDF0003EFC56 /* ViewController.swift in Sources */,
+				DCE125BD1DE6EDF0003EFC56 /* ConversationViewController.swift in Sources */,
+				DCE125D01DE70F3E003EFC56 /* SocketManager.swift in Sources */,
 				DCE125BB1DE6EDF0003EFC56 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

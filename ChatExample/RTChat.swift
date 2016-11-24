@@ -12,20 +12,27 @@ import ObjectMapper
 extension Router {
     enum Chat {
         case getAll
+        case createNew(name: String)
     }
 }
 
 extension Router.Chat: RouterProtocol {
     var settings: RTRequestSettings {
-        return RTRequestSettings(method: .get)
+        switch self {
+        case .getAll    : return RTRequestSettings(method: .get)
+        case .createNew : return RTRequestSettings(method: .post)
+        }
     }
     
     var path: String {
-        return ""
+        return "/rooms"
     }
     
     var parameters: [String : AnyObject]? {
-        return nil
+        switch self {
+        case .getAll                : return nil
+        case .createNew(let name)   : return ["room":["title": name] as AnyObject]
+        }
     }
 }
 

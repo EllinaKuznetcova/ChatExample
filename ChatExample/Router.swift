@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 
 enum Router {
-    static let BaseURL = ""
+    static let BaseURL = "https://fs-chat.herokuapp.com"
     static var OAuthToken: String?
     
     //MARK: -

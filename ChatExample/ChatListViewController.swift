@@ -23,12 +23,12 @@ class ChatListViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var request:DataRequest?
-    
     var chats: [ENChat] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.loadChats()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -37,7 +37,7 @@ class ChatListViewController: UIViewController {
     }
     
     func loadChats() {
-        self.request = Router.Chat.getAll.request().responseObject({ [weak self] (response: DataResponse<RTChatListResponse>) in
+        let _ = Router.Chat.getAll.request().responseObject({ [weak self] (response: DataResponse<RTChatListResponse>) in
             switch response.result {
             case .success(let value):
                 self?.chats = value.chats

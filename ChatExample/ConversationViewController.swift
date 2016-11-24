@@ -8,6 +8,7 @@
 
 import UIKit
 import JSQMessagesViewController
+import Alamofire
 
 class ConversationViewController: JSQMessagesViewController {
     
@@ -24,6 +25,19 @@ class ConversationViewController: JSQMessagesViewController {
         
         self.incomingBubbleData = JSQMessagesBubbleImageFactory().incomingMessagesBubbleImage(with: #colorLiteral(red: 0.15329051, green: 0.6822410479, blue: 1, alpha: 1))
         self.outgoingBubbleData = JSQMessagesBubbleImageFactory().outgoingMessagesBubbleImage(with: #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1))
+    }
+    
+    func loadMessages() {
+        guard let id = self.chat?.id else {return}
+        let _ = Router.Message.getAll(id: id).request().responseObject { (response: DataResponse<RTMessageListResponse>) in
+            switch response.result {
+            case .success(let value):
+                return
+//                self.messages = value.messages
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
 }
 

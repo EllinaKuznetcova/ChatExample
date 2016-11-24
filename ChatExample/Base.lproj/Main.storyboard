@@ -58,7 +58,13 @@
                             <constraint firstItem="Icn-EQ-6PF" firstAttribute="top" secondItem="vNX-uM-Jg4" secondAttribute="bottom" id="omi-pg-Fg2"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="aIw-1c-l7E"/>
+                    <navigationItem key="navigationItem" id="aIw-1c-l7E">
+                        <barButtonItem key="rightBarButtonItem" title="New" id="2PK-ix-Sor">
+                            <connections>
+                                <action selector="createNewChat:" destination="Yzy-0c-NwE" id="gaf-8d-mP1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="vNX-uM-Jg4" id="eKd-Vn-hBY"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="toDetailChat" id="TZw-yR-5hW"/>

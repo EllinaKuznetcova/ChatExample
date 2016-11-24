@@ -47,3 +47,15 @@ class RTChatListResponse: Mappable {
         
     }
 }
+
+class RTChatCreateResponse: Mappable {
+    var chat: ENChat?
+    
+    required convenience init?(map: Map) {
+        self.init()
+    }
+    
+    func mapping(map: Map) {
+        
+    }
+}

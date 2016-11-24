@@ -31,6 +31,30 @@ class ChatListViewController: UIViewController {
         self.loadChats()
     }
     
+    @IBAction func createNewChat(_ sender: Any) {
+        let alertController = UIAlertController(title: "Create new room", message: nil, preferredStyle: .alert)
+        alertController.addTextField { (textField) in
+            textField.placeholder = "name"
+            textField.textColor = UIColor.blue
+            textField.clearButtonMode = .whileEditing
+            textField.borderStyle = .roundedRect
+        }
+        
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alertController, weak self] (action) in
+            guard let text = alertController?.textFields?.first?.text else {return}
+            let _ = Router.Chat.createNew(name: text).request().responseObject({(response: DataResponse<RTChatCreateResponse>) in
+                switch response.result {
+                case .success(let value):
+                    guard let createdChat = value.chat else {return}
+                    self?.performSegue(withIdentifier: SegueData.toDetailChat, sender: SegueData(selectedChat: createdChat))
+                case .failure(let error):
+                    print(error)
+                }
+            })
+        }))
+        self.navigationController?.present(alertController, animated: true, completion: nil)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let senderData = sender as? SegueData else {return}
         (segue.destination as? ConversationViewController)?.chat = senderData.selectedChat

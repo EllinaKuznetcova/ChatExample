@@ -6,5 +6,8 @@ target 'ChatExample' do
   use_frameworks!
 
   # Pods for ChatExample
+  pod 'SocketRocket'
+  pod 'JSQMessagesViewController'
+  pod 'YapDatabase'
 
 end

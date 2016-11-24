@@ -9,3 +9,6 @@
 @import <JSQMessagesViewController/JSQMessages.h>
 @import SocketRocket;
 @import YapDatabase;
+@import FSHelpers_Swift;
+@import Alamofire;
+@import ObjectMapper;

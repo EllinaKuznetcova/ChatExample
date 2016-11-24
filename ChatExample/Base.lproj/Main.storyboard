@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vNX-uM-Jg4">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="24" width="375" height="643"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="basic" textLabel="V8v-oW-aXL" style="IBUITableViewCellStyleDefault" id="yLJ-SB-ZGJ">
@@ -54,7 +54,7 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="vNX-uM-Jg4" secondAttribute="trailing" id="3df-Uc-rew"/>
                             <constraint firstItem="vNX-uM-Jg4" firstAttribute="leading" secondItem="uTw-YN-DkF" secondAttribute="leading" id="X6Z-AQ-UlR"/>
-                            <constraint firstItem="vNX-uM-Jg4" firstAttribute="top" secondItem="mlh-Tq-iML" secondAttribute="bottom" id="YGr-f5-Vii"/>
+                            <constraint firstItem="vNX-uM-Jg4" firstAttribute="top" secondItem="mlh-Tq-iML" secondAttribute="bottom" constant="-40" id="YGr-f5-Vii"/>
                             <constraint firstItem="Icn-EQ-6PF" firstAttribute="top" secondItem="vNX-uM-Jg4" secondAttribute="bottom" id="omi-pg-Fg2"/>
                         </constraints>
                     </view>

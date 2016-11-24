@@ -14,6 +14,8 @@
 		DCE125C21DE6EDF0003EFC56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCE125C11DE6EDF0003EFC56 /* Assets.xcassets */; };
 		DCE125C51DE6EDF0003EFC56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCE125C31DE6EDF0003EFC56 /* LaunchScreen.storyboard */; };
 		DCE125D01DE70F3E003EFC56 /* SocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE125CF1DE70F3E003EFC56 /* SocketManager.swift */; };
+		DCE125D21DE72098003EFC56 /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE125D11DE72098003EFC56 /* ChatListViewController.swift */; };
+		DCE125D51DE72119003EFC56 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE125D41DE72119003EFC56 /* Chat.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		DCE125C61DE6EDF0003EFC56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DCE125CD1DE6F3C3003EFC56 /* BridgeHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgeHeader.h; sourceTree = "<group>"; };
 		DCE125CF1DE70F3E003EFC56 /* SocketManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketManager.swift; sourceTree = "<group>"; };
+		DCE125D11DE72098003EFC56 /* ChatListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
+		DCE125D41DE72119003EFC56 /* Chat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,9 +70,11 @@
 			children = (
 				DCE125C11DE6EDF0003EFC56 /* Assets.xcassets */,
 				DCE125BA1DE6EDF0003EFC56 /* AppDelegate.swift */,
+				DCE125D11DE72098003EFC56 /* ChatListViewController.swift */,
 				DCE125BC1DE6EDF0003EFC56 /* ConversationViewController.swift */,
 				DCE125C31DE6EDF0003EFC56 /* LaunchScreen.storyboard */,
 				DCE125BE1DE6EDF0003EFC56 /* Main.storyboard */,
+				DCE125D31DE7210E003EFC56 /* Database */,
 				DCE125CE1DE70EFC003EFC56 /* Servises */,
 				DCE125CC1DE6F3AA003EFC56 /* SupportingFiles */,
 			);
@@ -90,6 +96,14 @@
 				DCE125CF1DE70F3E003EFC56 /* SocketManager.swift */,
 			);
 			name = Servises;
+			sourceTree = "<group>";
+		};
+		DCE125D31DE7210E003EFC56 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				DCE125D41DE72119003EFC56 /* Chat.swift */,
+			);
+			name = Database;
 			sourceTree = "<group>";
 		};
 		DE494C4E2A935BF1BDD3C1B0 /* Pods */ = {
@@ -235,6 +249,8 @@
 			files = (
 				DCE125BD1DE6EDF0003EFC56 /* ConversationViewController.swift in Sources */,
 				DCE125D01DE70F3E003EFC56 /* SocketManager.swift in Sources */,
+				DCE125D21DE72098003EFC56 /* ChatListViewController.swift in Sources */,
+				DCE125D51DE72119003EFC56 /* Chat.swift in Sources */,
 				DCE125BB1DE6EDF0003EFC56 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

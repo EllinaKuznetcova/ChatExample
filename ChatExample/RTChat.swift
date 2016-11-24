@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import ObjectMapper
 
 extension Router {
     enum Chat {
@@ -25,5 +26,17 @@ extension Router.Chat: RouterProtocol {
     
     var parameters: [String : AnyObject]? {
         return nil
+    }
+}
+
+class RTChatListResponse: Mappable {
+    var chats: [ENChat] = []
+    
+    required convenience init?(map: Map) {
+        self.init()
+    }
+    
+    func mapping(map: Map) {
+        
     }
 }

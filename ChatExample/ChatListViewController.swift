@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class ChatListViewController: UIViewController {
     
@@ -22,19 +23,29 @@ class ChatListViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    var request:DataRequest?
+    
     var chats: [ENChat] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.chats = [ENChat()]
-        self.tableView.reloadData()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let senderData = sender as? SegueData else {return}
-        
         (segue.destination as? ConversationViewController)?.chat = senderData.selectedChat
+    }
+    
+    func loadChats() {
+        self.request = Router.Chat.getAll.request().responseObject({ [weak self] (response: DataResponse<RTChatListResponse>) in
+            switch response.result {
+            case .success(let value):
+                self?.chats = value.chats
+                self?.tableView.reloadData()
+            case .failure(let error):
+                print(error)
+            }
+        })
     }
 }
 

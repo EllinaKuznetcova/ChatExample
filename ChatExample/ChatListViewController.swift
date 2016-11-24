@@ -13,21 +13,21 @@ class ChatListViewController: UIViewController {
     struct SegueData {
         static var toDetailChat = "toDetailChat"
         
-        var selectedChat: Chat
+        var selectedChat: ENChat
         
-        init(selectedChat: Chat) {
+        init(selectedChat: ENChat) {
             self.selectedChat = selectedChat
         }
     }
     
     @IBOutlet weak var tableView: UITableView!
     
-    var chats: [Chat] = []
+    var chats: [ENChat] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.chats = [Chat()]
+        self.chats = [ENChat()]
         self.tableView.reloadData()
     }
     

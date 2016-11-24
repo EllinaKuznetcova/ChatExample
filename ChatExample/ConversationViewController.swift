@@ -12,7 +12,7 @@ import JSQMessagesViewController
 class ConversationViewController: JSQMessagesViewController {
     
     var messages = LoadFakeData()
-    var chat: Chat?
+    var chat: ENChat?
     var incomingBubbleData   :JSQMessageBubbleImageDataSource!
     var outgoingBubbleData  :JSQMessageBubbleImageDataSource!
 

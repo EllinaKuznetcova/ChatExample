@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Chat {
+class ENChat {
     var id: Int = 0
     var name: String = ""
 }

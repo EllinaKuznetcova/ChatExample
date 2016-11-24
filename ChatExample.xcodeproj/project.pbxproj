@@ -16,6 +16,11 @@
 		DCE125D01DE70F3E003EFC56 /* SocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE125CF1DE70F3E003EFC56 /* SocketManager.swift */; };
 		DCE125D21DE72098003EFC56 /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE125D11DE72098003EFC56 /* ChatListViewController.swift */; };
 		DCE125D51DE72119003EFC56 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE125D41DE72119003EFC56 /* Chat.swift */; };
+		DCE125D81DE7298A003EFC56 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE125D71DE7298A003EFC56 /* Router.swift */; };
+		DCE125DA1DE72A29003EFC56 /* RTChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE125D91DE72A29003EFC56 /* RTChat.swift */; };
+		DCE125DC1DE72B9C003EFC56 /* AlamofireHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE125DB1DE72B9C003EFC56 /* AlamofireHelpers.swift */; };
+		DCE125E01DE72C1C003EFC56 /* RTErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE125DE1DE72C1C003EFC56 /* RTErrors.swift */; };
+		DCE125E11DE72C1C003EFC56 /* RTErrorsDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE125DF1DE72C1C003EFC56 /* RTErrorsDescription.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +38,11 @@
 		DCE125CF1DE70F3E003EFC56 /* SocketManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketManager.swift; sourceTree = "<group>"; };
 		DCE125D11DE72098003EFC56 /* ChatListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
 		DCE125D41DE72119003EFC56 /* Chat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
+		DCE125D71DE7298A003EFC56 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		DCE125D91DE72A29003EFC56 /* RTChat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RTChat.swift; sourceTree = "<group>"; };
+		DCE125DB1DE72B9C003EFC56 /* AlamofireHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireHelpers.swift; sourceTree = "<group>"; };
+		DCE125DE1DE72C1C003EFC56 /* RTErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RTErrors.swift; sourceTree = "<group>"; };
+		DCE125DF1DE72C1C003EFC56 /* RTErrorsDescription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RTErrorsDescription.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +84,7 @@
 				DCE125BC1DE6EDF0003EFC56 /* ConversationViewController.swift */,
 				DCE125C31DE6EDF0003EFC56 /* LaunchScreen.storyboard */,
 				DCE125BE1DE6EDF0003EFC56 /* Main.storyboard */,
+				DCE125D61DE7294C003EFC56 /* API */,
 				DCE125D31DE7210E003EFC56 /* Database */,
 				DCE125CE1DE70EFC003EFC56 /* Servises */,
 				DCE125CC1DE6F3AA003EFC56 /* SupportingFiles */,
@@ -104,6 +115,26 @@
 				DCE125D41DE72119003EFC56 /* Chat.swift */,
 			);
 			name = Database;
+			sourceTree = "<group>";
+		};
+		DCE125D61DE7294C003EFC56 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				DCE125DB1DE72B9C003EFC56 /* AlamofireHelpers.swift */,
+				DCE125D71DE7298A003EFC56 /* Router.swift */,
+				DCE125D91DE72A29003EFC56 /* RTChat.swift */,
+				DCE125DD1DE72BC6003EFC56 /* Errors */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		DCE125DD1DE72BC6003EFC56 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				DCE125DE1DE72C1C003EFC56 /* RTErrors.swift */,
+				DCE125DF1DE72C1C003EFC56 /* RTErrorsDescription.swift */,
+			);
+			name = Errors;
 			sourceTree = "<group>";
 		};
 		DE494C4E2A935BF1BDD3C1B0 /* Pods */ = {
@@ -247,10 +278,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCE125DA1DE72A29003EFC56 /* RTChat.swift in Sources */,
+				DCE125E01DE72C1C003EFC56 /* RTErrors.swift in Sources */,
 				DCE125BD1DE6EDF0003EFC56 /* ConversationViewController.swift in Sources */,
 				DCE125D01DE70F3E003EFC56 /* SocketManager.swift in Sources */,
 				DCE125D21DE72098003EFC56 /* ChatListViewController.swift in Sources */,
+				DCE125DC1DE72B9C003EFC56 /* AlamofireHelpers.swift in Sources */,
 				DCE125D51DE72119003EFC56 /* Chat.swift in Sources */,
+				DCE125E11DE72C1C003EFC56 /* RTErrorsDescription.swift in Sources */,
+				DCE125D81DE7298A003EFC56 /* Router.swift in Sources */,
 				DCE125BB1DE6EDF0003EFC56 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
